@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let student = [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก',
+                age: 18,
+                year: 1,
+                gpa: 3.40,
+                help: true
+            },
+            {
+                fullname: 'นายส่งงาน ตลอดมา',
+                age: 19,
+                year: 2,
+                gpa: 3.00,
+                help: false
+            },
+            {
+                fullname: 'นางสาวใส่ใจ ดีงาม',
+                age: 20,
+                year: 3,
+                gpa: 2.90,
+                help: true
+            },
+            {
+                fullname: 'นายธรรมะ ธรรมโม',
+                age: 19,
+                year: 1,
+                gpa: 4.00,
+                help: false
+            },
+            {
+                fullname: 'นายรวย มาก',
+                age: 20,
+                year: 2,
+                gpa: 2.70,
+                help: true
+            },
+            {
+                fullname: 'นางสาวสวย มาก',
+                age: 19,
+                year: 1,
+                gpa: 2.75,
+                help: true
+            }
+
+
+        ]
+        for(let i in student){
+            let Bdate = 2564-student[i].age;
+            if(student[i].gpa >= 3.20){
+                if(student[i].help){
+                    console.log(student[i].fullname+' เกิดเมื่อปี '+Bdate+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                }
+                else{
+                    console.log(student[i].fullname+' เกิดเมื่อปี '+Bdate+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์')
+                }
+            }
+            else if(student[i].year >=2 && student[i].help){
+                if(student[i].gpa >= 2.75){
+                    console.log(student[i].fullname+' เกิดเมื่อปี '+Bdate+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย')
+                }
+                else{
+                    console.log(student[i].fullname+' เกิดเมื่อปี '+Bdate+' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์แต่ช่วยงานภาควิชา')
+                }
+            }
+            else if(student[i].gpa >= 2.75 && student[i].year < 2){
+                if(student[i].help){
+                    console.log(student[i].fullname+' เกิดเมื่อปี '+Bdate+' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชา แต่อยู่ชั้นปี 1')
+                }
+            }
+            else{
+                console.log(student[i].fullname+' เกิดเมื่อปี '+Bdate+' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์และยังไม่ได้ช่วยงานภาควิชาด้วย')
+            }
+        }
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
